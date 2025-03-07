@@ -27,6 +27,7 @@
         config = {
           plugins = with pkgs.vimPlugins; [
             # Plugins are installed via lazy-nvim.
+            # This one specifically doesn't seem to work but I don't know why.
             oxocarbon-nvim
           ];
         };
@@ -34,15 +35,13 @@
           # Deps
           ripgrep
 
-
-
           # LSP
           lua-language-server
 
-	        nixd
+          nixd
 
           dotnet-sdk
-	        csharp-ls
+          csharp-ls
         ];
       };
     });
