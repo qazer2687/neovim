@@ -17,7 +17,8 @@ return {
     'neovim/nvim-lspconfig',
     dependencies = {
       -- Ensure NixOS compatibility.
-      'VonHeikemen/lsp-zero.nvim', branch = 'v4.x',
+      'VonHeikemen/lsp-zero.nvim',
+      branch = 'v4.x',
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/nvim-cmp',
       'L3MON4D3/LuaSnip',
@@ -201,7 +202,7 @@ return {
       local lsp_zero = require('lsp-zero')
 
       lsp_zero.on_attach(function(client, bufnr)
-        lsp_zero.default_keymaps({buffer = bufnr})
+        lsp_zero.default_keymaps({ buffer = bufnr })
       end)
 
       require('lspconfig').lua_ls.setup({
@@ -209,31 +210,24 @@ return {
           allow_incremental_sync = false,
         },
       })
-      
+
+      require('lspconfig').pyright.setup({
+        flags = {
+          allow_incremental_sync = false,
+        },
+      })
+
       require('lspconfig').csharp_ls.setup({
         flags = {
           allow_incremental_sync = false,
         },
       })
-      
+
       require('lspconfig').nixd.setup({
         flags = {
           allow_incremental_sync = false,
         },
       })
-      
     end,
   },
 }
-
-
-
-
-
-
-
-
-
-  
-  
-  

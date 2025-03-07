@@ -21,7 +21,7 @@ end)
 -- Enable break indent
 vim.opt.breakindent = true
 
--- Indentation
+-- Indentation (managed by vim-sleuth)
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.tabstop = 2

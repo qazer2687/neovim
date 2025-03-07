@@ -40,6 +40,8 @@
 
           nixd
 
+          pyright
+
           dotnet-sdk
           csharp-ls
         ];

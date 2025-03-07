@@ -6,6 +6,7 @@
 --    :Lazy update
 --
 require('lazy').setup({
+  -- 'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically.
   require 'plugins/gitsigns',
   require 'plugins/which-key',
   require 'plugins/telescope',
@@ -22,7 +23,7 @@ require('lazy').setup({
   require 'plugins/neo-tree'
 }, {
   -- Move the lazy lockfile so that it can be written to.
-  lockfile = vim.fn.expand('~') .. '/.config/lazy-lock.json',
+  lockfile = vim.fn.expand('~') .. '/.config/nvim/config/lazy-lock.json',
 
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
