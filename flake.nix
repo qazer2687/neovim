@@ -4,6 +4,8 @@
   inputs.tolerable.url = "github:wires-org/tolerable-nvim-nix";
   inputs.tolerable.inputs.nixpkgs.follows = "nixpkgs";
 
+  inputs.oxocarbon-nvim.url = "github:qazer2687/oxocarbon.nvim";
+
   outputs = {
     self,
     nixpkgs,
@@ -25,10 +27,8 @@
           fileset = ./config;
         };
         config = {
-          plugins = with pkgs.vimPlugins; [
-            # Plugins are installed via lazy-nvim.
-            # This one specifically doesn't seem to work but I don't know why.
-            oxocarbon-nvim
+          plugins = [
+            inputs.oxocarbon-nvim.packages.${system}.oxocarbon-nvim
           ];
         };
         path = with pkgs; [
