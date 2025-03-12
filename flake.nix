@@ -28,7 +28,7 @@
         };
         config = {
           plugins = [
-            inputs.oxocarbon-nvim.packages.${system}.oxocarbon-nvim
+            inputs.oxocarbon-nvim.packages.aarch64-linux.oxocarbon-nvim
           ];
         };
         path = with pkgs; [
