@@ -15,10 +15,12 @@ require('lazy').setup({
   require 'plugins/cmp',
   require 'plugins/todo-comments',
   require 'plugins/mini',
-  --require 'plugins/treesitter',
+  require 'plugins/treesitter',
   require 'plugins/indent_line',
   require 'plugins/lint',
   require 'plugins/autopairs',
+  require 'plugins/twilight',
+  require 'plugins/zen-mode',
   require 'plugins/neo-tree'
 }, {
   -- Move the lazy lockfile so that it can be written to.
