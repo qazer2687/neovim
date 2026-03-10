@@ -7,5 +7,8 @@ return {
     vim.g.vimtex_view_method = "sioyek"
     vim.g.vimtex_callback_progpath = vim.v.progpath
     --vim.g.vimtex_view_sioyek_options = '--custom-color-mode --forward-search-file @tex --forward-search-line @line @pdf'
+    if vim.v.servername == "" then
+      vim.fn.serverstart('/tmp/nvim.sock')
+    end
   end,
 }
