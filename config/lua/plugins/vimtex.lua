@@ -5,6 +5,6 @@ return {
   init = function()
     -- VimTeX configuration goes here, e.g.
     vim.g.vimtex_view_method = "sioyek"
-    vim.g.vimtex_callback_progpath = vim.fn.exepath("nvr")
+    vim.g.vimtex_callback_progpath = vim.fn.exepath("nvim")
   end,
 }
