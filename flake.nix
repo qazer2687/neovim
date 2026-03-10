@@ -29,7 +29,7 @@
         path = with pkgs; [
           # LaTeX
           texliveFull
-          zathura # pdf viewer
+          sioyek # pdf viewer
           # Deps
           ripgrep
           # LSP
