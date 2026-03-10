@@ -2,7 +2,6 @@
   inputs.nixpkgs.url = "github:nixos/nixpkgs?ref=nixpkgs-unstable";
   inputs.tolerable.url = "github:wires-org/tolerable-nvim-nix";
   inputs.tolerable.inputs.nixpkgs.follows = "nixpkgs";
-  inputs.oxocarbon-nvim.url = "github:qazer2687/oxocarbon.nvim";
 
   outputs = {
     self,
@@ -25,9 +24,7 @@
           fileset = ./config;
         };
         config = {
-          plugins = [
-            inputs.oxocarbon-nvim.packages.aarch64-linux.oxocarbon-nvim
-          ];
+          plugins = [];
         };
         path = with pkgs; [
           # Deps
