@@ -27,6 +27,8 @@
           plugins = [];
         };
         path = with pkgs; [
+          # LaTeX
+          zathura # pdf viewer
           # Deps
           ripgrep
           # LSP

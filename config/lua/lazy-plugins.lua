@@ -6,14 +6,13 @@
 --    :Lazy update
 --
 require('lazy').setup({
-  -- 'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically.
   require 'plugins/gitsigns',
   require 'plugins/which-key',
   require 'plugins/telescope',
   require 'plugins/lspconfig',
+  require 'plugins/vimtex',
   require 'plugins/conform',
   require 'plugins/cmp',
-  require 'plugins/oxocarbon',
   require 'plugins/todo-comments',
   require 'plugins/mini',
   require 'plugins/treesitter',
