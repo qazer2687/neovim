@@ -15,7 +15,7 @@ require('lazy').setup({
   require 'plugins/cmp',
   require 'plugins/todo-comments',
   require 'plugins/mini',
-  require 'plugins/treesitter',
+  --require 'plugins/treesitter',
   require 'plugins/indent_line',
   require 'plugins/lint',
   require 'plugins/autopairs',

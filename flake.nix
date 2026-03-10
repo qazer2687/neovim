@@ -28,6 +28,7 @@
         };
         path = with pkgs; [
           # LaTeX
+          texliveFull
           zathura # pdf viewer
           # Deps
           ripgrep
