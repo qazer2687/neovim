@@ -10,6 +10,9 @@ return {
       vim.fn.serverlist()[1]
     )
 
+    -- hide the issues window when running the compiler
+    vim.g.vimtex_quickfix_mode = 0
+
     -- move by visual line inside tex and bib files
     vim.api.nvim_create_autocmd("FileType", {
       pattern = { "tex", "bib" },
