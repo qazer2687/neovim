@@ -6,6 +6,7 @@
 --    :Lazy update
 --
 require('lazy').setup({
+  require 'plugins/catppuccin',
   require 'plugins/gitsigns',
   require 'plugins/which-key',
   require 'plugins/telescope',
