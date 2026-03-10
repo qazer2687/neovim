@@ -29,7 +29,8 @@
         path = with pkgs; [
           # LaTeX
           texliveFull
-          sioyek # pdf viewer
+          sioyek
+          neovim-remote
           # Deps
           ripgrep
           # LSP
