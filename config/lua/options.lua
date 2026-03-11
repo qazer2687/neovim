@@ -67,4 +67,5 @@ vim.opt.background = "dark"
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
+vim.opt.statusline:append("%{wordcount().words} words")
 -- vim: ts=2 sts=2 sw=2 et

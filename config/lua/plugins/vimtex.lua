@@ -21,5 +21,13 @@ return {
         vim.keymap.set("n", "k", "gk", { buffer = true })
       end,
     })
+    -- spell checker
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = { "tex", "markdown" },
+      callback = function()
+        vim.opt_local.spell = true
+        vim.opt_local.spelllang = { "en_gb" }
+      end,
+})
   end,
 }
