@@ -11,8 +11,9 @@ return {
   },
   cmd = 'Neotree',
   opts = {
-    window = {
-      title = false,
+    source_selector = {
+      winbar = false,
+      statusline = false,
     },
   },
   -- Display neotree on launch.
