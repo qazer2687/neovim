@@ -23,9 +23,10 @@ return {
     })
   end,
   config = function()
-    require("neo-tree").setup({})
-    vim.schedule(function()
-      vim.cmd("Neotree")
-    end)
+    require("neo-tree").setup({
+      window = {
+        width = 30,
+      },
+    })
   end,
 }
