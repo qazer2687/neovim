@@ -11,10 +11,14 @@ return {
   },
   opts = {},
   init = function()
-    vim.api.nvim_create_autocmd("FileType", {
-      pattern = "neo-tree",
+    vim.api.nvim_create_autocmd("BufEnter", {
+      pattern = "*",
       callback = function()
-        vim.opt_local.statusline = " "
+        if vim.bo.filetype == "neo-tree" then
+          vim.defer_fn(function()
+            vim.opt_local.statusline = " "
+          end, 50)
+        end
       end,
     })
   end,
