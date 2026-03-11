@@ -6,20 +6,20 @@ return {
   version = '*',
   dependencies = {
     'nvim-lua/plenary.nvim',
-    'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+    'nvim-tree/nvim-web-devicons',
     'MunifTanjim/nui.nvim',
   },
   cmd = 'Neotree',
+  init = function()
+    vim.api.nvim_set_hl(0, "NeoTreeStatusLine", { link = "StatusLine" })
+    vim.api.nvim_set_hl(0, "NeoTreeStatusLineNC", { link = "StatusLineNC" })
+  end,
   opts = {
     source_selector = {
       winbar = false,
       statusline = false,
     },
   },
-
-  vim.api.nvim_set_hl(0, "NeoTreeStatusLine", { fg = "NONE", bg = "NONE" })
-  vim.api.nvim_set_hl(0, "NeoTreeStatusLineNC", { fg = "NONE", bg = "NONE" })
-  -- Display neotree on launch.
   config = function()
     vim.schedule(function()
       vim.cmd("Neotree")
