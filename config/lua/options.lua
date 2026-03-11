@@ -62,10 +62,13 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 8
 
+vim.opt.linebreak = true
+vim.opt.wrap = true
+vim.opt.textwidth = 0
+
 -- Configure background.
 vim.opt.background = "dark"
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
-vim.opt.statusline:append("%{wordcount().words} words")
 -- vim: ts=2 sts=2 sw=2 et
