@@ -1,0 +1,4 @@
+{
+  "declancm/cinnamon.nvim",
+  opts = {},
+}
