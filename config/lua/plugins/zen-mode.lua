@@ -14,6 +14,7 @@ return {
         list = false,
         wrap = true,
         linebreak = true,
+        scrolloff = 999,
       },
     },
     plugins = {
