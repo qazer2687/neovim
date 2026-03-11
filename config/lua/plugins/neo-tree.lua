@@ -6,20 +6,20 @@ return {
   version = '*',
   dependencies = {
     'nvim-lua/plenary.nvim',
-    'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+    'nvim-tree/nvim-web-devicons',
     'MunifTanjim/nui.nvim',
   },
   opts = {},
-
-  -- clear title in statusbar
-  vim.api.nvim_create_autocmd("FileType", {
-    pattern = "neo-tree",
-    callback = function()
-      vim.opt_local.statusline = " "
-    end,
-  })
-  -- Display neotree on launch.
+  init = function()
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "neo-tree",
+      callback = function()
+        vim.opt_local.statusline = " "
+      end,
+    })
+  end,
   config = function()
+    require("neo-tree").setup({})
     vim.schedule(function()
       vim.cmd("Neotree")
     end)
