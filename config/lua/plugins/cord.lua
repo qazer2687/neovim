@@ -27,7 +27,7 @@ return {
     },
     text = {
       default = nil,
-      workspace = nil,
+      workspace = end,
       viewing = function(opts) return 'Viewing ' .. opts.filename end,
       editing = function(opts) return 'Editing ' .. opts.filename end,
       file_browser = function(opts) return 'Browsing files in ' .. opts.name end,
