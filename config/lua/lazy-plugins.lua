@@ -23,8 +23,7 @@ require('lazy').setup({
   require 'plugins/twilight',
   require 'plugins/zen-mode',
   require 'plugins/neo-tree',
-  require 'plugins/cord',
-  require 'plugins/aw-watcher-nvim'
+  require 'plugins/cord'
 }, {
   -- Move the lazy lockfile so that it can be written to.
   lockfile = vim.fn.expand('~') .. '/.config/nvim/config/lazy-lock.json',
