@@ -205,29 +205,7 @@ return {
         lsp_zero.default_keymaps({ buffer = bufnr })
       end)
 
-      require('lspconfig').lua_ls.setup({
-        flags = {
-          allow_incremental_sync = false,
-        },
-      })
-
-      require('lspconfig').pyright.setup({
-        flags = {
-          allow_incremental_sync = false,
-        },
-      })
-
-      require('lspconfig').csharp_ls.setup({
-        flags = {
-          allow_incremental_sync = false,
-        },
-      })
-
-      require('lspconfig').nixd.setup({
-        flags = {
-          allow_incremental_sync = false,
-        },
-      })
+      vim.lsp.enable({ 'lua_ls', 'pyright', 'csharp_ls', 'nixd' })
     end,
   },
 }
