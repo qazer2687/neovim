@@ -39,6 +39,7 @@
           pyright
           dotnet-sdk
           csharp-ls
+          markdownlint-cli2
         ];
       };
     in {
